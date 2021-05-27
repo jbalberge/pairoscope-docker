@@ -1,7 +1,6 @@
-BAM=/data/bams/2_HyperUltra_mm_9_HLNKWDSXY.2.aligned.duplicates_marked.bam
-# BAM=/data/bams/3_HyperUltra_mm_9_HVJGNDSXY.3.aligned.duplicates_marked.bam
+BAM=/data/bams/toyBam.bam
 
-SAMPLE=MGUS_CTC_1
+SAMPLE=toySAMPLE
 
 OUT_PNG=/data/output/${SAMPLE}.pairoscope.png
 OUT_READS=/data/output/${SAMPLE}.pairoscope.reads.txt
