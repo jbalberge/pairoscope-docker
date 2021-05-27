@@ -1,3 +1,7 @@
+# This is an example of how to run pairoscope and tgen's code for pairoscope discordant read calling
+# Do not run this script directly in the docker
+# Adapt to computing infrastructure (terra...)
+
 BAM=/data/bams/toyBam.bam
 
 SAMPLE=toySAMPLE
