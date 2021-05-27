@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
 	libfreetype6-dev \
 	wget \
 	samtools \
-	libbam-dev
+	libbam-dev \
+	python3-pip
 
 RUN git clone https://github.com/jbalberge/pairoscope.git \
 	&&  cd pairoscope \
@@ -21,13 +22,6 @@ RUN git clone https://github.com/jbalberge/pairoscope.git \
 	&& make \
 	&& make install
 
-#RUN wget --no-check-certificate https://github.com/genome/pairoscope/archive/refs/tags/v0.4.2.tar.gz \
-#	&& tar xvzf v0.4.2.tar.gz \
-#	&& rm v0.4.2.tar.gz
-#
-#RUN samtools --version && which samtools
-#
-#RUN mkdir pairoscope-0.4.2/build \
-##	&& cd pairoscope-0.4.2/build \
-#	&& cmake ../ \
-#	&& make -j
+RUN pip3 install pandas
+
+COPY phoenix_pairoscope_code.py /code/phoenix_pairoscope_code.py
