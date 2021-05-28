@@ -25,3 +25,6 @@ RUN git clone https://github.com/jbalberge/pairoscope.git \
 RUN pip3 install pandas
 
 COPY phoenix_pairoscope_code.py /code/phoenix_pairoscope_code.py
+COPY pairoscope.sh /code/pairoscope.sh
+
+RUN /bin/bash -c 'chmod +x /code/pairoscope.sh'
